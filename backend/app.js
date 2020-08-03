@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const sequelize = require('./config/db-connect')
+
 const postRouter = require('./routes/post-route')
 const userRouter = require('./routes/user-route')
 

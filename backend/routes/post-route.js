@@ -20,16 +20,17 @@ router.post('/add', async (req, res) => {
     try{
         await Post.create({
             title: req.body.title,
-            text: req.body.text
+            text: req.body.text,
+            author: req.body.author
         })
         res.json({
-            message: 'Post has been created'
+            isComplete: true
         })
         res.status(200)
     }catch (e) {
         console.log(e)
         res.status(500).json({
-            message: 'Server error'
+            isComplete: false
         })
     }
 })
